@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BB5CC906A4DE0097ABC1A1CCEF9EB1E44871FE14",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "72d253a3-f578-49e8-93a1-c4f3578b91ff++7542" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BB5CC906A4DE0097ABC1A1CCEF9EB1E44871FE14" : 0,
+    "72d253a3-f578-49e8-93a1-c4f3578b91ff++7542" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0C5B54B9-C0AB-45D6-923E-5BA574737C50",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BB5CC906A4DE0097ABC1A1CCEF9EB1E44871FE14" : "Tin%20Cong%20Nghe\/",
+    "72d253a3-f578-49e8-93a1-c4f3578b91ff++7542" : "Tin%20Cong%20Nghe\/TinCongNghe\/TinCongNghe\/AFNetworking\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TinCongNghe",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TinCongNghe\/TinCongNghe.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/kinioslab.svn.cloudforge.com\/dkgroup",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "72d253a3-f578-49e8-93a1-c4f3578b91ff++7542"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AsweetDreams\/Tin-Cong-Nghe",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BB5CC906A4DE0097ABC1A1CCEF9EB1E44871FE14"
+    }
+  ]
+}

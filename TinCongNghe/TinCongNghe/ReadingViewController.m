@@ -169,6 +169,7 @@
     [self StartInit];
     number = Number;
     for ( int i = 0; i < Number; i++) {
+        [self removeFilecache];
         Article *articleTemp = [listArticle objectAtIndex:i];
         NSString *url = [NSString stringWithFormat:kGenkURL,articleTemp.mainUrl];
             [self loadcontentWithurl:url withCompletionBlock:^(NSMutableArray *tempRead, NSMutableArray *tempKey, NSMutableArray *listRegular, Article *oneArticle) {
@@ -305,6 +306,19 @@
     }
 }
 
+-(void)removeFilecache{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory,
+                                                         NSUserDomainMask, YES);
+    NSString *cacheDirectoryPath = [paths objectAtIndex:0];
+    for (int i = 0; i < 5; i++) {
+            NSString *filePath = [cacheDirectoryPath stringByAppendingPathComponent:[NSString stringWithFormat:@"article%d.txt",i]];
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            BOOL fileExisted = [fileManager fileExistsAtPath:filePath];
+            if (fileExisted) {
+                BOOL fileremove = [fileManager removeItemAtPath:filePath error:nil];
+            }
+    }
+}
 
 -(void)loadcontentWithurl:(NSString *)url withCompletionBlock:(void(^)(NSMutableArray *tempRead, NSMutableArray *tempKey,NSMutableArray *listRegular,Article *oneArticle))completion{
     
