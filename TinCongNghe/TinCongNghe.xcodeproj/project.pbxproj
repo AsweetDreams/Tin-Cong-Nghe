@@ -49,6 +49,7 @@
 		EE96CA4A1D2579C000F067A5 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96CA491D2579C000F067A5 /* NewViewController.m */; };
 		EE96CA4D1D2591BB00F067A5 /* ReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96CA4C1D2591BB00F067A5 /* ReadingViewController.m */; };
 		EEA1568B1D3131DA0085F9E4 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA1568A1D3131DA0085F9E4 /* TTTAttributedLabel.m */; };
+		EEA35BB61D40D50A002B0B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEA35BB81D40D50A002B0B97 /* Localizable.strings */; };
 		EEA924EC1D23DE35005C8642 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA924E71D23DE35005C8642 /* TFHpple.m */; };
 		EEA924ED1D23DE35005C8642 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA924E91D23DE35005C8642 /* TFHppleElement.m */; };
 		EEA924EE1D23DE35005C8642 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA924EB1D23DE35005C8642 /* XPathQuery.m */; };
@@ -71,6 +72,8 @@
 		EEB551D01D2BB6C3009FAB7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB551CF1D2BB6C3009FAB7B /* QuartzCore.framework */; };
 		EEBA47171D337C790030AA6E /* Detect3GorWifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBA47161D337C790030AA6E /* Detect3GorWifiViewController.m */; };
 		EEDA278C1D31E04900618B51 /* LinesOfInfor.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA278B1D31E04900618B51 /* LinesOfInfor.m */; };
+		EEDE0B401D40DAC600D9632D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEDE0B3F1D40DAC600D9632D /* Info.plist */; };
+		EEDE0B431D40DB0200D9632D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEDE0B451D40DB0200D9632D /* InfoPlist.strings */; };
 		EEE549951D2A58A9001B92FC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE549941D2A58A9001B92FC /* CoreText.framework */; };
 		EEF3628C1D1E1BCE00DBAE71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF3628B1D1E1BCE00DBAE71 /* Foundation.framework */; };
 		EEF3628E1D1E1BD600DBAE71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF3628D1D1E1BD600DBAE71 /* CoreGraphics.framework */; };
@@ -129,7 +132,6 @@
 		EE4F0EBA1D1C228B004AC243 /* TinCongNghe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinCongNghe.xcdatamodel; sourceTree = "<group>"; };
 		EE4F0EBC1D1C228B004AC243 /* resource.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = resource.xcassets; sourceTree = "<group>"; };
 		EE4F0EBF1D1C228B004AC243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EE4F0EC11D1C228B004AC243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE4F0EC61D1C228B004AC243 /* TinCongNgheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinCongNgheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4F0ECA1D1C228B004AC243 /* TinCongNgheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TinCongNgheTests.m; sourceTree = "<group>"; };
 		EE4F0ECC1D1C228B004AC243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -191,6 +193,10 @@
 		EE96CA4C1D2591BB00F067A5 /* ReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingViewController.m; sourceTree = "<group>"; };
 		EEA156891D3131DA0085F9E4 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		EEA1568A1D3131DA0085F9E4 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		EEA35BB21D40D0F5002B0B97 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EEA35BB31D40D0F5002B0B97 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		EEA35BB71D40D50A002B0B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EEA35BB91D40D50F002B0B97 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EEA924E61D23DE35005C8642 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		EEA924E71D23DE35005C8642 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		EEA924E81D23DE35005C8642 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -235,6 +241,9 @@
 		EEBA47161D337C790030AA6E /* Detect3GorWifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Detect3GorWifiViewController.m; sourceTree = "<group>"; };
 		EEDA278A1D31E04900618B51 /* LinesOfInfor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinesOfInfor.h; sourceTree = "<group>"; };
 		EEDA278B1D31E04900618B51 /* LinesOfInfor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinesOfInfor.m; sourceTree = "<group>"; };
+		EEDE0B3F1D40DAC600D9632D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEDE0B441D40DB0200D9632D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EEDE0B461D40DB0500D9632D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EEE549941D2A58A9001B92FC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		EEF3628B1D1E1BCE00DBAE71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEF3628D1D1E1BD600DBAE71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -320,6 +329,8 @@
 		EE4F0EA11D1C228B004AC243 = {
 			isa = PBXGroup;
 			children = (
+				EEDE0B451D40DB0200D9632D /* InfoPlist.strings */,
+				EEA35BB81D40D50A002B0B97 /* Localizable.strings */,
 				EE4F0F491D1C353E004AC243 /* PrefixHeader.pch */,
 				EE4F0EAC1D1C228B004AC243 /* TinCongNghe */,
 				EE4F0EC91D1C228B004AC243 /* TinCongNgheTests */,
@@ -356,6 +367,7 @@
 		EE4F0EAD1D1C228B004AC243 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EEDE0B3F1D40DAC600D9632D /* Info.plist */,
 				EE4F0EAE1D1C228B004AC243 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -432,7 +444,6 @@
 			children = (
 				EE4F0EBC1D1C228B004AC243 /* resource.xcassets */,
 				EE4F0EBE1D1C228B004AC243 /* LaunchScreen.storyboard */,
-				EE4F0EC11D1C228B004AC243 /* Info.plist */,
 				EE4F0EB91D1C228B004AC243 /* TinCongNghe.xcdatamodeld */,
 			);
 			name = Resource;
@@ -707,6 +718,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = EE4F0EA11D1C228B004AC243;
 			productRefGroup = EE4F0EAB1D1C228B004AC243 /* Products */;
@@ -725,11 +737,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEDE0B401D40DAC600D9632D /* Info.plist in Resources */,
 				EEF362AA1D1E1BF600DBAE71 /* Info.plist in Resources */,
 				EE4F0EC01D1C228B004AC243 /* LaunchScreen.storyboard in Resources */,
 				EE4F0EBD1D1C228B004AC243 /* resource.xcassets in Resources */,
+				EEA35BB61D40D50A002B0B97 /* Localizable.strings in Resources */,
 				EE4F0EB81D1C228B004AC243 /* Main.storyboard in Resources */,
 				EE31033A1D3BF1EE00137B9C /* README.txt in Resources */,
+				EEDE0B431D40DB0200D9632D /* InfoPlist.strings in Resources */,
 				EE3103391D3BF1EE00137B9C /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -854,6 +869,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EE4F0EB71D1C228B004AC243 /* Base */,
+				EEA35BB31D40D0F5002B0B97 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -862,8 +878,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				EE4F0EBF1D1C228B004AC243 /* Base */,
+				EEA35BB21D40D0F5002B0B97 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EEA35BB81D40D50A002B0B97 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEA35BB71D40D50A002B0B97 /* en */,
+				EEA35BB91D40D50F002B0B97 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		EEDE0B451D40DB0200D9632D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEDE0B441D40DB0200D9632D /* en */,
+				EEDE0B461D40DB0500D9632D /* vi */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

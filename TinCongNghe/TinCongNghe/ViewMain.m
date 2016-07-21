@@ -133,9 +133,6 @@
     [self.navigationController.view addSubview:view];
 }
 
--(void)showMenuChoose:(id)sender{
-    NSLog(@"Custom Control");
-}
 -(void)contentExpand:(id)sender{
     NSLog(@"Show Expand");
 }
@@ -161,14 +158,14 @@
     
     Home = [UIButton buttonWithType:UIButtonTypeCustom];
     [Home addTarget:self action:@selector(showContentHome:) forControlEvents:UIControlEventTouchUpInside];
-    [Home setTitle:@"Home" forState:UIControlStateNormal];
+    [Home setTitle:NSLocalizedString(@"Home",@"Message") forState:UIControlStateNormal];
     [Home setBackgroundImage:[UIImage imageNamed:@"background"] forState:UIControlStateSelected];
     [subview addSubview:Home];
     Home.selected = YES;
     
     New = [UIButton buttonWithType:UIButtonTypeCustom];
     [New addTarget:self action:@selector(showContentNew:) forControlEvents:UIControlEventTouchUpInside];
-    [New setTitle:@"New" forState:UIControlStateNormal];
+    [New setTitle:NSLocalizedString(@"New",@"Message") forState:UIControlStateNormal];
     [New setBackgroundImage:[UIImage imageNamed:@"background"] forState:UIControlStateSelected];
     [subview addSubview:New];
     
