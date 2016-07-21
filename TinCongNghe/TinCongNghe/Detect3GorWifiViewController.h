@@ -17,9 +17,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *btn100Mb;
 @property (strong, nonatomic) IBOutlet UIButton *btn200Mb;
 @property (strong, nonatomic) IBOutlet UIButton *btn300Mb;
-@property (assign, nonatomic) NSInteger output;
 
-+ (instancetype) sharedInstance;
--(BOOL)check;
--(instancetype)initwithState:(BOOL )state andValue:(int )interger;
 @end

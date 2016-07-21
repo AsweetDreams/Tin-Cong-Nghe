@@ -182,7 +182,7 @@
 		EE4F0F2A1D1C2EC1004AC243 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		EE4F0F451D1C303E004AC243 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		EE4F0F461D1C303E004AC243 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
-		EE4F0F491D1C353E004AC243 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EE4F0F491D1C353E004AC243 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
 		EE70602C1D267BB1001BE7BA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		EE70602D1D267BB1001BE7BA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EE70602F1D267FB6001BE7BA /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
@@ -329,9 +329,6 @@
 		EE4F0EA11D1C228B004AC243 = {
 			isa = PBXGroup;
 			children = (
-				EEDE0B451D40DB0200D9632D /* InfoPlist.strings */,
-				EEA35BB81D40D50A002B0B97 /* Localizable.strings */,
-				EE4F0F491D1C353E004AC243 /* PrefixHeader.pch */,
 				EE4F0EAC1D1C228B004AC243 /* TinCongNghe */,
 				EE4F0EC91D1C228B004AC243 /* TinCongNgheTests */,
 				EE4F0ED41D1C228B004AC243 /* TinCongNgheUITests */,
@@ -367,6 +364,9 @@
 		EE4F0EAD1D1C228B004AC243 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EEDE0B451D40DB0200D9632D /* InfoPlist.strings */,
+				EEA35BB81D40D50A002B0B97 /* Localizable.strings */,
+				EE4F0F491D1C353E004AC243 /* PrefixHeader.pch */,
 				EEDE0B3F1D40DAC600D9632D /* Info.plist */,
 				EE4F0EAE1D1C228B004AC243 /* main.m */,
 			);
@@ -890,6 +890,7 @@
 				EEA35BB91D40D50F002B0B97 /* vi */,
 			);
 			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EEDE0B451D40DB0200D9632D /* InfoPlist.strings */ = {
@@ -899,6 +900,7 @@
 				EEDE0B461D40DB0500D9632D /* vi */,
 			);
 			name = InfoPlist.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

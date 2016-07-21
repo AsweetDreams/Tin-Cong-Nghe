@@ -20,8 +20,7 @@
     NSMutableArray *listArticle;
     NSInteger pageNumber;
     BOOL isloadmore;
-    Detect3GorWifiViewController *network;
-    BOOL ableLoad;
+    NSInteger ableLoad;
     Reachability *reachability;
     NSArray *listOff;
     ReadingViewController *content;
@@ -39,9 +38,9 @@
     self.url = @""; isloadmore = false;
     self.queueHTMLParse = [[NSOperationQueue alloc] init];
     [self.queueHTMLParse setName:kQueueNameHTMLParse];
-
-    network = [Detect3GorWifiViewController sharedInstance];
-    ableLoad = [network check];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    ableLoad = [[defaults objectForKey:kAllstate]integerValue];
+    NSLog(@"%lu",ableLoad);
     
     refreshControl = [[CarbonSwipeRefresh alloc] initWithScrollView:self.clvContent];
     [refreshControl setColors:@[
@@ -145,7 +144,9 @@
                     NSData *myData = [NSKeyedArchiver archivedDataWithRootObject:listDict];
                     BOOL saveResult = [myData writeToFile:filePath atomically:YES];
                     NSLog(@"SaveResult = %d",saveResult);
-                    [content loadBeforeWithArr:listArticle andOfNumber:1];
+                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                    NSInteger interger = [[defaults objectForKey:kdataMb]integerValue];
+                    [content loadBeforeWithArr:listArticle andOfNumber:interger];
                 }
             }];
         }

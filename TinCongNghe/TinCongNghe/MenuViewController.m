@@ -72,7 +72,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     NSLog(@"%lu",indexPath.section);
     if (indexPath.section == 1) {
-        Detect3GorWifiViewController *Detect3GorWifi = [self.storyboard instantiateViewControllerWithIdentifier:@"Detect3GorWifiViewController"];
+        Detect3GorWifiViewController *Detect3GorWifi = [[Detect3GorWifiViewController alloc]init];
+        Detect3GorWifi = [self.storyboard instantiateViewControllerWithIdentifier:@"Detect3GorWifiViewController"];
         [self presentViewController:Detect3GorWifi animated:YES completion:^{
         }];
     }

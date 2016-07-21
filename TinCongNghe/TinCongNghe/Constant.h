@@ -14,3 +14,8 @@
 #define kGenkURL @"http://genk.vn/%@"
 #define kQueueNameHTMLParse @"kQueueNameHTMLParse"
 #define kMenuItems @[@"AppName",@"Offline"]
+#define kCountpage @"Countpage"
+#define kdataMb @"dataMb"
+#define kAllstate @"Allstate"
+#define kWifistate @"Wifistate"
+#define k3gstate @"3gstate"

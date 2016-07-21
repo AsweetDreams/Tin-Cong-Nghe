@@ -17,72 +17,57 @@
 
 @implementation Detect3GorWifiViewController
 
-+ (instancetype)sharedInstance
-{
-    static dispatch_once_t onceToken;
-    static Detect3GorWifiViewController *sharedInstance;
-    
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[Detect3GorWifiViewController alloc]initwithState:YES andValue:100];
-    });
-    
-    return sharedInstance;
-}
-
--(instancetype)initwithState:(BOOL )state andValue:(int )interger{
-    if (self == [super init]) {
-        self.switchWifi = [[UISwitch alloc]init];
-        self.switchAll = [[UISwitch alloc]init];
-        self.switch3G = [[UISwitch alloc]init];
-        self.btn100Mb = [[UIButton alloc]init];
-        self.btn200Mb = [[UIButton alloc]init];
-        self.btn300Mb = [[UIButton alloc]init];
-        self.output = 1;
-        self.switchAll.on = state;
-        self.switchWifi.on = state;
-        switch (interger) {
-            case 100:
-                self.btn100Mb.selected = YES;
-                break;
-            case 200:
-                self.btn200Mb.selected = YES;
-                break;
-            case 300:
-                self.btn300Mb.selected = YES;
-                break;
-            default:
-                break;
-        }
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:k3gstate] == nil) {
+        [defaults setInteger:1 forKey:kdataMb];
+        [defaults setInteger:0 forKey:kAllstate];
+        [defaults setInteger:0 forKey:kWifistate];
+        [defaults setInteger:0 forKey:k3gstate];
     }
+    // Do any additional setup after loading the view.
+    self.switchAll.on = [[defaults objectForKey:kAllstate]integerValue];
+    self.switchWifi.on = [[defaults objectForKey:kWifistate]integerValue];
+    self.switch3G.on = [[defaults objectForKey:k3gstate]integerValue];
+    NSLog(@"%i - %i - %i",self.switchAll.on, self.switchWifi.on,self.switch3G.on);
+    NSInteger integer = [[defaults objectForKey:kdataMb]integerValue];
+    switch (integer) {
+        case 0:
+        case 1:
+            self.btn100Mb.selected = YES;
+            break;
+        case 3:
+            self.btn200Mb.selected = YES;
+            break;
+        case 5:
+            self.btn300Mb.selected = YES;
+            break;
+        default:
+            break;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
--(BOOL)check{
-    if (self.switchAll.on) {
-        return YES;
-    }else{
-        return NO;
-    }
-}
 
 - (IBAction)switchAll:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (self.switchAll.on) {
         self.switchAll.on = 1;
         self.switchWifi.on = 1;
+        [defaults setInteger:self.switchAll.on forKey:kAllstate];
+        [defaults setInteger:self.switchWifi.on forKey:kWifistate];
     }else{
         self.switchAll.on = 0;
         self.switchWifi.on = 0;
         self.switch3G.on = 0;
+        [defaults setInteger:self.switchAll.on forKey:kAllstate];
+        [defaults setInteger:self.switchWifi.on forKey:kWifistate];
+        [defaults setInteger:self.switch3G.on forKey:k3gstate];
     }
 }
 - (IBAction)switchWifi:(id)sender {
@@ -94,6 +79,9 @@
             self.switchAll.on = 0;
         }
     }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:self.switchAll.on forKey:kAllstate];
+    [defaults setInteger:self.switchWifi.on forKey:kWifistate];
 }
 - (IBAction)switch3G:(id)sender {
     if (self.switch3G.on) {
@@ -104,29 +92,35 @@
             self.switchAll.on = 0;
         }
     }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:self.switch3G.on forKey:kAllstate];
+    [defaults setInteger:self.switchAll.on forKey:k3gstate];
 }
 - (IBAction)btn100Mb:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (!self.btn100Mb.selected) {
-        self.output = 1;
         self.btn100Mb.selected = true;
         self.btn200Mb.selected = false;
         self.btn300Mb.selected = false;
+        [defaults setInteger:1 forKey:kdataMb];
     }
 }
 - (IBAction)btn200Mb:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (!self.btn200Mb.selected) {
-        self.output = 3;
         self.btn200Mb.selected = true;
         self.btn100Mb.selected = false;
         self.btn300Mb.selected = false;
+        [defaults setInteger:3 forKey:kdataMb];
     }
 }
 - (IBAction)btn300Mb:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (!self.btn300Mb.selected) {
-        self.output = 5;
         self.btn300Mb.selected = true;
         self.btn100Mb.selected = false;
         self.btn200Mb.selected = false;
+        [defaults setInteger:5 forKey:kdataMb];
     }
 }
 
