@@ -71,6 +71,8 @@
 		EEB551CE1D2BA0D1009FAB7B /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB551CC1D2BA0D1009FAB7B /* UIScrollView+SVPullToRefresh.m */; };
 		EEB551D01D2BB6C3009FAB7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB551CF1D2BB6C3009FAB7B /* QuartzCore.framework */; };
 		EEBA47171D337C790030AA6E /* Detect3GorWifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBA47161D337C790030AA6E /* Detect3GorWifiViewController.m */; };
+		EEBD99D61D42F2C700889FB7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBD99D51D42F2C700889FB7 /* FacebookSDK.framework */; };
+		EEBD99D91D42FDAD00889FB7 /* FaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBD99D81D42FDAD00889FB7 /* FaceViewController.m */; };
 		EEDA278C1D31E04900618B51 /* LinesOfInfor.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA278B1D31E04900618B51 /* LinesOfInfor.m */; };
 		EEDE0B401D40DAC600D9632D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEDE0B3F1D40DAC600D9632D /* Info.plist */; };
 		EEDE0B431D40DB0200D9632D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEDE0B451D40DB0200D9632D /* InfoPlist.strings */; };
@@ -239,6 +241,9 @@
 		EEB551CF1D2BB6C3009FAB7B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EEBA47151D337C790030AA6E /* Detect3GorWifiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Detect3GorWifiViewController.h; sourceTree = "<group>"; };
 		EEBA47161D337C790030AA6E /* Detect3GorWifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Detect3GorWifiViewController.m; sourceTree = "<group>"; };
+		EEBD99D51D42F2C700889FB7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		EEBD99D71D42FDAD00889FB7 /* FaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceViewController.h; sourceTree = "<group>"; };
+		EEBD99D81D42FDAD00889FB7 /* FaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceViewController.m; sourceTree = "<group>"; };
 		EEDA278A1D31E04900618B51 /* LinesOfInfor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinesOfInfor.h; sourceTree = "<group>"; };
 		EEDA278B1D31E04900618B51 /* LinesOfInfor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinesOfInfor.m; sourceTree = "<group>"; };
 		EEDE0B3F1D40DAC600D9632D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -290,6 +295,7 @@
 				EEE549951D2A58A9001B92FC /* CoreText.framework in Frameworks */,
 				EE3103381D3BF1EE00137B9C /* GoogleMobileAds.framework in Frameworks */,
 				EEA924F01D23DF1C005C8642 /* libxml2.tbd in Frameworks */,
+				EEBD99D61D42F2C700889FB7 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +400,7 @@
 		EE4F0EE31D1C22A5004AC243 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				EEBD99D51D42F2C700889FB7 /* FacebookSDK.framework */,
 				EE31032F1D3BF1EE00137B9C /* Mediation Adapters */,
 				EE31032C1D3BF1CF00137B9C /* AudioToolbox.framework */,
 				EE31032A1D3BF1C900137B9C /* StoreKit.framework */,
@@ -435,6 +442,8 @@
 				EE96CA491D2579C000F067A5 /* NewViewController.m */,
 				EE96CA4B1D2591BB00F067A5 /* ReadingViewController.h */,
 				EE96CA4C1D2591BB00F067A5 /* ReadingViewController.m */,
+				EEBD99D71D42FDAD00889FB7 /* FaceViewController.h */,
+				EEBD99D81D42FDAD00889FB7 /* FaceViewController.m */,
 			);
 			name = Screen;
 			sourceTree = "<group>";
@@ -770,6 +779,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBD99D91D42FDAD00889FB7 /* FaceViewController.m in Sources */,
 				EEA925251D2434EC005C8642 /* Article.m in Sources */,
 				EE7060311D267FB6001BE7BA /* MenuViewController.m in Sources */,
 				EE4F0F361D1C2EC1004AC243 /* UIImage+MultiFormat.m in Sources */,
@@ -992,8 +1002,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(inherited)/TinCongNghe/FacebookSDK.framework",
 					"$(PROJECT_DIR)/TinCongNghe",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
@@ -1010,8 +1022,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(inherited)/TinCongNghe/FacebookSDK.framework",
 					"$(PROJECT_DIR)/TinCongNghe",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";

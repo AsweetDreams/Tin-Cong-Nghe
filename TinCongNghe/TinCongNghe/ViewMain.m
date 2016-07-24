@@ -9,6 +9,7 @@
 #import "ViewMain.h"
 #import "View+MASShorthandAdditions.h"
 #import "Detect3GorWifiViewController.h"
+#import "FaceViewController.h"
 
 @interface ViewMain ()<CarbonTabSwipeNavigationDelegate>
 {
@@ -34,7 +35,6 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[ViewMain alloc]init];
     });
-    
     return sharedInstance;
 }
 
@@ -56,8 +56,6 @@
     [self style];
     [self customNavigation];
 }
-
-
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewDidAppear:YES];
@@ -109,9 +107,10 @@
     [view addSubview:Menu];
     
     expand = [UIButton buttonWithType:UIButtonTypeCustom];
-    [expand addTarget:self action:@selector(contentExpand:) forControlEvents:UIControlEventTouchUpInside];
-    [expand setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
-    expand.frame = CGRectMake(self.navigationController.navigationBar.frame.size.width - 40, 30, 30, self.navigationController.navigationBar.frame.size.height - 20);
+    [expand addTarget:self action:@selector(contentExpand:)
+     forControlEvents:UIControlEventTouchUpInside];
+    [expand setImage:[UIImage imageNamed:@"facebook-icon"] forState:UIControlStateNormal];
+    expand.frame = CGRectMake(self.navigationController.navigationBar.frame.size.width - 60, 20, 60, self.navigationController.navigationBar.frame.size.height);
     [view addSubview:expand];
     
     UIView *subview = [self customViewHomeandNew];
@@ -134,7 +133,10 @@
 }
 
 -(void)contentExpand:(id)sender{
-    NSLog(@"Show Expand");
+    FaceViewController *face = [self.storyboard instantiateViewControllerWithIdentifier:@"FaceViewController"];
+    [self presentViewController:face animated:YES completion:^{
+        
+    }];
 }
 
 -(void)showContentHome:(BOOL)sender{
