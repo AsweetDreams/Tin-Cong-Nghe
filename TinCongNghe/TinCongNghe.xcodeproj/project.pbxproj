@@ -77,6 +77,7 @@
 		EEDE0B401D40DAC600D9632D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEDE0B3F1D40DAC600D9632D /* Info.plist */; };
 		EEDE0B431D40DB0200D9632D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEDE0B451D40DB0200D9632D /* InfoPlist.strings */; };
 		EEE549951D2A58A9001B92FC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE549941D2A58A9001B92FC /* CoreText.framework */; };
+		EEEC0F201D4650E500DF6EDB /* UIImageView+BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEC0F1F1D4650E500DF6EDB /* UIImageView+BlurView.m */; };
 		EEF3628C1D1E1BCE00DBAE71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF3628B1D1E1BCE00DBAE71 /* Foundation.framework */; };
 		EEF3628E1D1E1BD600DBAE71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF3628D1D1E1BD600DBAE71 /* CoreGraphics.framework */; };
 		EEF362AA1D1E1BF600DBAE71 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEF362901D1E1BF600DBAE71 /* Info.plist */; };
@@ -250,6 +251,8 @@
 		EEDE0B441D40DB0200D9632D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EEDE0B461D40DB0500D9632D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EEE549941D2A58A9001B92FC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		EEEC0F1E1D4650E500DF6EDB /* UIImageView+BlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BlurView.h"; sourceTree = "<group>"; };
+		EEEC0F1F1D4650E500DF6EDB /* UIImageView+BlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BlurView.m"; sourceTree = "<group>"; };
 		EEF3628B1D1E1BCE00DBAE71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEF3628D1D1E1BD600DBAE71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EEF362901D1E1BF600DBAE71 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -431,7 +434,6 @@
 				EEBA47161D337C790030AA6E /* Detect3GorWifiViewController.m */,
 				EE70602F1D267FB6001BE7BA /* MenuViewController.h */,
 				EE7060301D267FB6001BE7BA /* MenuViewController.m */,
-				EE4F0EB61D1C228B004AC243 /* Main.storyboard */,
 				EE4F0EB31D1C228B004AC243 /* ViewMain.h */,
 				EE4F0EB41D1C228B004AC243 /* ViewMain.m */,
 				EE4F0F451D1C303E004AC243 /* ContentViewController.h */,
@@ -451,6 +453,7 @@
 		EE4F0EE61D1C2C89004AC243 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				EE4F0EB61D1C228B004AC243 /* Main.storyboard */,
 				EE4F0EBC1D1C228B004AC243 /* resource.xcassets */,
 				EE4F0EBE1D1C228B004AC243 /* LaunchScreen.storyboard */,
 				EE4F0EB91D1C228B004AC243 /* TinCongNghe.xcdatamodeld */,
@@ -581,6 +584,8 @@
 				EEA925231D2434EC005C8642 /* Article.h */,
 				EEDA278A1D31E04900618B51 /* LinesOfInfor.h */,
 				EEDA278B1D31E04900618B51 /* LinesOfInfor.m */,
+				EEEC0F1E1D4650E500DF6EDB /* UIImageView+BlurView.h */,
+				EEEC0F1F1D4650E500DF6EDB /* UIImageView+BlurView.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -787,6 +792,7 @@
 				EEA9250F1D23E90D005C8642 /* AFSecurityPolicy.m in Sources */,
 				EE96CA4D1D2591BB00F067A5 /* ReadingViewController.m in Sources */,
 				EE4F0F471D1C303E004AC243 /* ContentViewController.m in Sources */,
+				EEEC0F201D4650E500DF6EDB /* UIImageView+BlurView.m in Sources */,
 				EEF362B11D1E1BF600DBAE71 /* NSArray+MASAdditions.m in Sources */,
 				EEA924EC1D23DE35005C8642 /* TFHpple.m in Sources */,
 				EEA1568B1D3131DA0085F9E4 /* TTTAttributedLabel.m in Sources */,

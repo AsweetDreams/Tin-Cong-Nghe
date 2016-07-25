@@ -21,6 +21,7 @@
     self.menuTbv.delegate = self;
     // Do any additional setup after loading the view.
     self.menuItems = kMenuItems;
+    self.menuTbv.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,6 +84,5 @@
     if ( indexPath.section == 0 ) return nil;
     return indexPath;
 }
-
 
 @end

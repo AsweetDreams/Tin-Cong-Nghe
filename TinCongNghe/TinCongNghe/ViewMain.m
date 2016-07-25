@@ -54,7 +54,6 @@
     carbonTabSwipeNavigation = [[CarbonTabSwipeNavigation alloc]initWithItems:items delegate:self];
     [carbonTabSwipeNavigation insertIntoRootViewController:self];
     [self style];
-    [self customNavigation];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -77,6 +76,7 @@
         //[revealViewController panGestureRecognizer];
         [home.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    [self customNavigation];
 }
 
 -(void)getlinkFirstScreen;
@@ -118,16 +118,20 @@
     subview.layer.borderColor = UIColor.blackColor.CGColor;
     subview.layer.borderWidth = 1;
     subview.clipsToBounds = YES;
+      UIEdgeInsets padding = UIEdgeInsetsMake(10, 0, 10, 0);
     [view addSubview:subview];
-    UIEdgeInsets padding = UIEdgeInsetsMake(10, 0, 10, 0);
-    [subview mas_makeConstraints:^(MASConstraintMaker *make) {
+        [subview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(@0);
         make.width.equalTo(@200);
         make.top.equalTo(Menu.mas_top).insets(padding);
         make.bottom.equalTo(Menu.mas_bottom).insets(padding);
     }];
     
-    view.backgroundColor = [UIColor redColor];
+    view.backgroundColor = [UIColor clearColor];
+    UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.navigationController.navigationBar.frame.size.width, self.navigationController.navigationBar.frame.size.height + 20)];
+    [UIImageView makeBlurEffectWithImageView:imageview];
+    imageview.image = [UIImage imageNamed:@"Jeff-Bezos"];
+    [self.navigationController.view addSubview:imageview];
     
     [self.navigationController.view addSubview:view];
 }

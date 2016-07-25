@@ -45,16 +45,7 @@
     // Do any additional setup after loading the view.
     UIImageView *imageViewTemp = [[UIImageView alloc]init];
     imageViewTemp.image = [UIImage imageNamed:@"imgres"];
-    
-    // create effect
-    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-    
-    // add effect to an effect view
-    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
-    effectView.frame = self.view.frame;
-    
-    // add the effect view to the image view
-    [imageViewTemp addSubview:effectView];
+    [UIImageView makeBlurEffectWithImageView:imageViewTemp];
     [self.btnClose setBackgroundImage:imageViewTemp.image forState:UIControlStateNormal];
     self.btnClose.layer.cornerRadius = 15.0f;
     self.btnClose.layer.borderColor = UIColor.blackColor.CGColor;
@@ -117,7 +108,14 @@
         make.width.equalTo(@100);
     }];
     
-    viewNavigation.backgroundColor = [UIColor blackColor];
+    
+    UIImageView *imageview2 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.navigationController.navigationBar.frame.size.width, self.navigationController.navigationBar.frame.size.height + 20)];
+    [UIImageView makeBlurEffectWithImageView:imageview2];
+    imageview2.image = [UIImage imageNamed:@"Jeff-Bezos"];
+    [self.navigationController.view addSubview:imageview2];
+    [self.navigationController.view addSubview:imageview2];
+    
+    viewNavigation.backgroundColor = [UIColor clearColor];
     
     [self.navigationController.view addSubview:viewNavigation];
 }
